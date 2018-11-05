@@ -17,11 +17,12 @@ export default class Search extends Component {
 
   query () {
     const {search} = this.state
+    const {state, update} = this.props
     axios.get(`http://localhost:3000/designers?q=${search}`)
       .then(res => {
-        this.setState({
-          data: res
-        })
+        const {data} = res
+        state.designer = data[0]
+        update(state)
       })
       .catch(err => {
         console.log(err)
