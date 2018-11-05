@@ -30,9 +30,20 @@ body {
     padding: 20px;
     width: 960px;
   }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+  }
 }
 
 header {
   display: flex;
   flex-direction: column;
+}
+
+.featured-image {
+  border: 10px solid #ffffff;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, .1);
 }

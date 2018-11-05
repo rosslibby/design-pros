@@ -18,13 +18,6 @@ class App extends Component {
     })
   }
 
-  getName () {
-    const {name} = this.state.designer
-    if (name === undefined)
-      return <Main />
-    return <Main title={name.split(' ').slice(0, 2).join('-')} />
-  }
-
   render() {
     return (
       <Router>
@@ -43,7 +36,7 @@ class App extends Component {
               </Link>
             </nav>
           </header>
-          <Route exact path='/' render={(props) => this.getName()} />
+          <Route exact path='/' render={(designer) => <Main designer={this.state.designer} />} />
           <Route exact path='/professionals' component={Professional} />
         </div>
       </Router>
