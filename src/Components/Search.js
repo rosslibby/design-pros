@@ -6,7 +6,8 @@ export default class Search extends Component {
     super ()
 
     this.state = {
-      search: ''
+      search: '',
+      data: {}
     }
   }
 
@@ -18,7 +19,9 @@ export default class Search extends Component {
     const {search} = this.state
     axios.get(`http://localhost:3000/designers?q=${search}`)
       .then(res => {
-        console.log(res)
+        this.setState({
+          data: res
+        })
       })
       .catch(err => {
         console.log(err)
@@ -26,9 +29,11 @@ export default class Search extends Component {
   }
 
   render () {
-    return <div>
-      <input type='text' onChange={e => this.updateSearch(e.target.value)} />
-      <button onClick={() => this.query()}>Search</button>
+    return <div className='search'>
+      <div>
+        <input type='text' onChange={e => this.updateSearch(e.target.value)} className='search__input' />
+        <button onClick={() => this.query()}>Search</button>
+      </div>
     </div>
   }
 }

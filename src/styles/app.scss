@@ -1,3 +1,38 @@
 body {
-  background-color: red;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+
+  &__input {
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+  }
+}
+
+@media (min-width: 1200px) {
+  .app {
+    border-radius: 4px;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    margin: 3rem 0;
+    padding: 20px;
+    width: 960px;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
 }

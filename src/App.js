@@ -8,8 +8,8 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
+          <Search />
           <header>
-            <Search />
             <nav>
               <Link to='/'>
                 <button>Home</button>
