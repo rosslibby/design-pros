@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Contact, Home, Main, Professional } from './Components'
+import { Contact, Home, Main, Professional, Search } from './Components'
+import style from './styles/app.scss'
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
       <Router>
         <div className="app">
           <header>
+            <Search />
             <nav>
               <Link to='/'>
                 <button>Home</button>
