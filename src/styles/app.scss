@@ -2,6 +2,7 @@ body {
   background-color: #fafafa;
   display: flex;
   justify-content: center;
+  color: #fa1a1f;
 }
 
 .app {
@@ -33,8 +34,14 @@ body {
 
   .main-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 60px 0;
+
+    &__text {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
