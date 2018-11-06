@@ -27,6 +27,7 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
+        <div className='main-content'>
           <div className='logo'>Designer Professionals</div>
           <Search
             state={this.state}
@@ -44,6 +45,7 @@ class App extends Component {
           </header>
           <Route exact path='/' render={(designer) => <Main designer={this.state.designer} />} />
           <Route exact path='/professionals' component={Professional} />
+          </div>
         </div>
       </Router>
     )

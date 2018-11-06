@@ -37,8 +37,8 @@
   .main-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 60px 0;
+    align-self: center;
+    width: 87%;
 
     &__text {
       display: flex;
