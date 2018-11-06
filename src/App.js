@@ -27,6 +27,7 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
+          <div className='logo'>Designer Professionals</div>
           <Search
             state={this.state}
             update={(state, designer) => this.updateDesigner(state, designer)}
