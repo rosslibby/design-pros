@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import { Card } from 'Components'
 
 export default class Main extends Component {
@@ -12,7 +13,7 @@ export default class Main extends Component {
 
   getName () {
     const {name} = this.props.designer
-    return name.split(' ').slice(0, 2).join('-')
+    return name
   }
 
   getCover () {
@@ -51,6 +52,9 @@ export default class Main extends Component {
         <Card center={true}>
           {this.getLocation()}
           {this.getDescription()}
+          <NavLink activeClassName='page-button page-button--active' to='/contact' className='page-button'>
+            {`Learn more about ${this.getName()}`}
+          </NavLink>
         </Card>
       </div>
       {/*{learnMore}*/}

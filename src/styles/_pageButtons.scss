@@ -3,14 +3,15 @@
   width: 100%;
   justify-content: center;
   padding: .75rem 0;
-  background-color: #f44336;
+  background-color: #ccc;
   color: #ffffff;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
-}
-
-.page-link {
   margin: .5rem;
   text-decoration: none;
+
+  &--active {
+    background-color: #16202f;
+  }
 }

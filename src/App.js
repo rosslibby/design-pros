@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 import { Contact, Header, Main } from './Components'
 import './styles/dashboard.scss'
 
@@ -27,17 +27,14 @@ class App extends Component {
             update={ state => this.updateDesigner(state)} />
           <div className='main-content'>
             <div className='column column--two'>
-              <Link to='/' className='page-link'>
-                <button className='page-button'>
-                  { name !== undefined ? name : 'Home' }
-                </button>
-              </Link>
-              <Link to='/contact' className='page-link'>
-                <button className='page-button'>
-                  Contact</button>
-              </Link>
+              <NavLink activeClassName='page-button page-button--active' to='/main' className='page-button'>
+                  { name !== undefined ? name : 'Professional' }
+              </NavLink>
+              <NavLink activeClassName='page-button page-button--active' to='/contact' className='page-button'>
+                  Contact
+              </NavLink>
             </div>
-            <Route exact path='/' render={(designer) => <Main designer={this.state.designer} />} />
+            <Route exact path='/main' render={(designer) => <Main designer={this.state.designer} />} />
             <Route exact path='/contact' render={(designer) => <Contact designer={this.state.designer} />} />
           </div>
         </div>
