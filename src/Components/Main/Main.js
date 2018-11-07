@@ -19,7 +19,7 @@ export default class Main extends Component {
   getCover () {
     const { featured_image } = this.props.designer
     return featured_image ? <img
-      src={`http://localhost:3000/assets/images/${featured_image}`}
+      src={`http://design-pro-api.herokuapp.com/assets/images/${featured_image}`}
       alt='Featured'
       className='featured-image' /> : ''
   }

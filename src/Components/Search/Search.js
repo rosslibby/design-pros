@@ -26,7 +26,7 @@ export default class Search extends Component {
   query (search) {
     const { state, update } = this.props
     // todo: this should NOT be hardcoded -- get endpoint from ENV
-    axios.get(`http://localhost:3000/designers?q=${search}`)
+    axios.get(`http://design-pro-api.herokuapp.com/designers?q=${search}`)
       .then(res => {
         const { data } = res
         state.designer = data[0]
