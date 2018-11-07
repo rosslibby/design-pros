@@ -10,4 +10,14 @@
   &--two {
     grid-template-columns: 1fr 1fr;
   }
+
+  @media (max-width: 1024px) {
+    &--two {
+      grid-template-columns: 1fr;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
 }
