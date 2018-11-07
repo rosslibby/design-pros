@@ -7,6 +7,7 @@ export default class Search extends Component {
     super ()
 
     this.state = {
+      visible: false,
       search: '',
       data: {}
     }
