@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
+import { Card } from 'Components'
 
 export default class Main extends Component {
-  getImage () {
-    const title = this.getName()
+  constructor () {
+    super ()
 
-    return title ? <img
-      src={
-        `http://localhost:3000/assets/images/${title}-design-cover-image.jpg`
-      }
-      alt='Featured'
-      className='featured-image' /> : ''
+    this.state = {
+      img: ''
+    }
   }
 
   getName () {
@@ -17,10 +15,28 @@ export default class Main extends Component {
     return name.split(' ').slice(0, 2).join('-')
   }
 
+  getCover () {
+    const { featured_image } = this.props.designer
+    return featured_image ? <img
+      src={`http://localhost:3000/assets/images/${featured_image}`}
+      alt='Featured'
+      className='featured-image' /> : ''
+  }
+
+  getLogo () {
+    const { logo } = this.props.designer
+    return logo ? '' : ''
+  }
+
   getLocation () {
     const {city, country, state} = this.props.designer.contact
     console.log(this.props.designer)
-    return `${country} - ${state} - ${city}`
+    return <h1>{`${country !== undefined ? country : 'USA'} - ${city} - ${state}`}</h1>
+  }
+
+  getDescription () {
+    const { description } = this.props.designer
+    return <p>{description}</p>
   }
 
   render () {
@@ -30,10 +46,14 @@ export default class Main extends Component {
       return <div />
 
     return <content className='main-content'>
-      {this.getImage()}
-      {this.getLocation()}
-      {/*{description}
-      {learnMore}*/}
+      <div className='column column--two'>
+        <Card>{this.getCover()}</Card>
+        <Card>
+          {this.getLocation()}
+          {this.getDescription()}
+        </Card>
+      </div>
+      {/*{learnMore}*/}
     </content>
   }
 }

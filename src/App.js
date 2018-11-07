@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Card, Header, Main, Professional } from './Components'
+import { Header, Main, Professional } from './Components'
 import './styles/dashboard.scss'
 
 class App extends Component {
@@ -19,9 +19,8 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     const {name} = this.state.designer
-    console.log(name)
+
     return (
       <Router>
         <div className="app">
