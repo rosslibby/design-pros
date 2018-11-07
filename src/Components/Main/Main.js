@@ -48,7 +48,7 @@ export default class Main extends Component {
     return <content className='main-content'>
       <div className='column column--two'>
         <Card>{this.getCover()}</Card>
-        <Card>
+        <Card center={true}>
           {this.getLocation()}
           {this.getDescription()}
         </Card>
