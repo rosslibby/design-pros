@@ -55,8 +55,10 @@ export default class Contact extends Component {
         <Card center={true}>
           {this.getLogo()}
           {this.getLocation()}
+          <hr />
           {this.getAddress()}
-          {this.getPhone()}
+          <hr />
+          <strong>{this.getPhone()}</strong>
         </Card>
       </div>
       {/*{learnMore}*/}

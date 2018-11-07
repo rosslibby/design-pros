@@ -32,7 +32,7 @@ export default class Input extends Component {
          if (e.keyCode === 13)
            this.query()
        }} />
-      <button onClick={() => this.query()}>Search</button>
+      <button onClick={() => this.query()} className='search__input-button'><i className='fas fa-arrow-circle-right' /></button>
     </div>
   }
 }

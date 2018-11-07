@@ -51,7 +51,9 @@ export default class Main extends Component {
         <Card>{this.getCover()}</Card>
         <Card center={true}>
           {this.getLocation()}
+          <hr />
           {this.getDescription()}
+          <hr />
           <NavLink activeClassName='page-button page-button--active' to='/contact' className='page-button'>
             {`Learn more about ${this.getName()}`}
           </NavLink>
