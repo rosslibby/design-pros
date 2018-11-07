@@ -1,5 +1,7 @@
 .column {
   display: grid;
+  column-gap: .5rem;
+  margin: .5rem;
 
   &--one {
     grid-template-columns: 1fr;
