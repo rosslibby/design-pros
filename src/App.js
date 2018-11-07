@@ -24,9 +24,11 @@ class App extends Component {
       <Router>
         <div className="app">
         <header className='dashboard__header'>
-          <span className='dashboard__title'>Dashboard</span>
-          <span className='dashboard__search'>Search</span>
-          <span className='dashboard__notifications'>3</span>
+          <span className='dashboard__title'>Designer Professionals</span>
+          <div>
+            <span className='dashboard__search'><i class="fas fa-search"></i></span>
+            <span className='dashboard__notifications'>3</span>
+          </div>
         </header>
         <div className='main-content'>
           <div className='logo'>Designer Professionals</div>
