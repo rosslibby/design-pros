@@ -5,32 +5,15 @@ $gray: #101823;
 @import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
 @import 'grid';
 @import 'card';
+@import 'pageButtons';
 
 body {
   background-color: #f6fafb;
   font-family: 'Gudea', sans-serif;
 }
 
-.header {
-  align-items: center;
-  background-color: $white;
-  border-bottom: 1px solid rgba(120,130,140,.13);
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  min-height: 3.5rem;
-  justify-content: space-between;
-  padding: 0 2rem;
-
-  &__icon {
-    padding: 0 .4rem;
-  }
-}
-
 .sidebar {
-  background-color: #gray;
+  background-color: $gray;
 }
 
 .main-content {

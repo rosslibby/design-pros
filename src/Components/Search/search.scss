@@ -6,6 +6,7 @@
   }
 
   &__input {
+    display: flex;
     width: 0;
     transition: all .5s ease;
     visibility: hidden;
