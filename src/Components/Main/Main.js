@@ -30,7 +30,7 @@ export default class Main extends Component {
 
   getLocation () {
     const {city, country, state} = this.props.designer.contact
-    console.log(this.props.designer)
+
     return <h1>{`${country !== undefined ? country : 'USA'} - ${city} - ${state}`}</h1>
   }
 

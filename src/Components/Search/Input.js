@@ -27,7 +27,11 @@ export default class Input extends Component {
       <input
         type='text'
         onChange={e => this.update(e.target.value)}
-        className='search__input-text' />
+        className='search__input-text'
+        onKeyUp={e => {
+         if (e.keyCode === 13)
+           this.query()
+       }} />
       <button onClick={() => this.query()}>Search</button>
     </div>
   }

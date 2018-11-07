@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Header, Main, Professional } from './Components'
+import { Contact, Header, Main } from './Components'
 import './styles/dashboard.scss'
 
 class App extends Component {
@@ -13,9 +13,7 @@ class App extends Component {
   }
 
   updateDesigner (state) {
-    this.setState(state, () => {
-      console.log(this.state)
-    })
+    this.setState(state)
   }
 
   render() {
@@ -34,13 +32,13 @@ class App extends Component {
                   { name !== undefined ? name : 'Home' }
                 </button>
               </Link>
-              <Link to='/professionals' className='page-link'>
+              <Link to='/contact' className='page-link'>
                 <button className='page-button'>
-                  Professionals</button>
+                  Contact</button>
               </Link>
             </div>
             <Route exact path='/' render={(designer) => <Main designer={this.state.designer} />} />
-            <Route exact path='/professionals' component={Professional} />
+            <Route exact path='/contact' render={(designer) => <Contact designer={this.state.designer} />} />
           </div>
         </div>
       </Router>
