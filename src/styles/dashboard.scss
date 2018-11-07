@@ -1,0 +1,19 @@
+$white: #ffffff;
+
+body {
+  background-color: #f6fafb;
+}
+
+.dashboard {
+  &__header {
+    align-items: center;
+    background-color: $white;
+    border-bottom: 1px solid rgba(120,130,140,.13);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 3.5rem;
+  }
+}

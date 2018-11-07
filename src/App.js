@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { Main, Professional, Search } from './Components'
-import './styles/app.scss'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faStroopwafel)
+// import './styles/app.scss'
+import './styles/dashboard.scss'
 
 class App extends Component {
   constructor () {
@@ -27,6 +23,11 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
+        <header className='dashboard__header'>
+          <span className='dashboard__title'>Dashboard</span>
+          <span className='dashboard__search'>Search</span>
+          <span className='dashboard__notifications'>3</span>
+        </header>
         <div className='main-content'>
           <div className='logo'>Designer Professionals</div>
           <nav className='navigation'>
