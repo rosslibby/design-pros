@@ -19,6 +19,9 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
+    const {name} = this.state.designer
+    console.log(name)
     return (
       <Router>
         <div className="app">
@@ -29,7 +32,8 @@ class App extends Component {
             <div className='column column--two'>
               <Link to='/' className='page-link'>
                 <button className='page-button'>
-                  Home</button>
+                  { name !== undefined ? name : 'Home' }
+                </button>
               </Link>
               <Link to='/professionals' className='page-link'>
                 <button className='page-button'>
