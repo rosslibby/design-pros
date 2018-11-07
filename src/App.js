@@ -27,14 +27,14 @@ class App extends Component {
             update={ state => this.updateDesigner(state)} />
           <div className='main-content'>
             <div className='column column--two'>
-              <NavLink activeClassName='page-button page-button--active' to='/main' className='page-button'>
+              <NavLink exact activeClassName='page-button page-button--active' to='/' className='page-button'>
                   { name !== undefined ? name : 'Professional' }
               </NavLink>
               <NavLink activeClassName='page-button page-button--active' to='/contact' className='page-button'>
                   Contact
               </NavLink>
             </div>
-            <Route exact path='/main' render={(designer) => <Main designer={this.state.designer} />} />
+            <Route exact path='/' render={(designer) => <Main designer={this.state.designer} />} />
             <Route exact path='/contact' render={(designer) => <Contact designer={this.state.designer} />} />
           </div>
         </div>
