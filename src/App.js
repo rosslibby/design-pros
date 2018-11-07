@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Main, Professional, Search } from './Components'
+import { Card, Main, Professional, Search } from './Components'
 // import './styles/app.scss'
 import './styles/dashboard.scss'
 
@@ -23,14 +23,19 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-        <header className='dashboard__header'>
-          <span className='dashboard__title'>Designer Professionals</span>
-          <div>
-            <span className='dashboard__search'><i class="fas fa-search"></i></span>
-            <span className='dashboard__notifications'>3</span>
+        <header className='header'>
+          <span className='header__title'>Designer Professionals</span>
+          <div className='header__icons'>
+            <span className='header__icon'>
+              <i className='fas fa-search' />
+            </span>
+            <span className='header__icon'>
+              <i className='fas fa-bell' />
+            </span>
           </div>
         </header>
         <div className='main-content'>
+        <Card>Here is info</Card>
           <div className='logo'>Designer Professionals</div>
           <nav className='navigation'>
             <ul className='navigation__list'>
