@@ -29,6 +29,13 @@ class App extends Component {
         <div className="app">
         <div className='main-content'>
           <div className='logo'>Designer Professionals</div>
+          <nav className='navigation'>
+            <ul className='navigation__list'>
+              <li className='navigation__link'>Home</li>
+              <li className='navigation__link'>Info</li>
+              <li className='navigation__link'>Support</li>
+            </ul>
+          </nav>
           <Search
             state={this.state}
             update={(state, designer) => this.updateDesigner(state, designer)}

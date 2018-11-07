@@ -1,0 +1,15 @@
+.navigation {
+  display: inline-flex;
+
+  .navigation__list {
+    padding: 0;
+
+    .navigation__link {
+      list-style: none;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 13px;
+      color: #9c9c9c;
+      text-transform: uppercase;
+    }
+  }
+}

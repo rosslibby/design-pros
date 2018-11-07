@@ -1,6 +1,8 @@
 @import url('https://use.typekit.net/kmy0viq.css');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import 'body';
 @import 'header';
+@import 'navigation';
 
 #root {
   display: flex;
@@ -24,13 +26,18 @@
   }
 }
 
-@media (min-width: 1200px) {
+.app {
+  box-shadow: 0px 3px 5px 0.05px rgba(57,57,57,0.12);
+  box-sizing: border-box;
+  display: flex;
+  margin: 1rem auto;
+  padding: 20px;
+  width: 96%;
+}
+
+@media (min-width: 1025px) {
   .app {
-    box-shadow: 0px 3px 5px 0.05px rgba(57,57,57,0.12);
-    box-sizing: border-box;
-    display: flex;
     margin: 3rem 0;
-    padding: 20px;
     width: 80%;
   }
 
@@ -39,11 +46,18 @@
     flex-direction: column;
     align-self: center;
     width: 87%;
+    padding: 20px 0;
 
     &__text {
       display: flex;
       justify-content: center;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .app {
+    margin: .5rem auto;
   }
 }
 
