@@ -7,14 +7,28 @@ export default class Input extends Component {
     this.state = { search: '' }
   }
 
-  updateSearch (search) {
-    this.setState({ search })
+  update (search) {
+    const { update } = this.props
+    this.setState({ search }, () => {
+      update(search)
+    })
+  }
+
+  query () {
+    const { search } = this.state
+    const { query } = this.props
+    query(search)
   }
 
   render () {
-    return <input
-      type='text'
-      onChange={e => this.updateSearch(e.target.value)}
-      className='search__input' />
+    const { visible } = this.props
+
+    return <div className={`search__input ${visible ? 'search__input--visible' : ''}`}>
+      <input
+        type='text'
+        onChange={e => this.update(e.target.value)}
+        className='search__input-text' />
+      <button onClick={() => this.query()}>Search</button>
+    </div>
   }
 }
