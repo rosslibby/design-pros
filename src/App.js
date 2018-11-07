@@ -35,7 +35,12 @@ class App extends Component {
           </div>
         </header>
         <div className='main-content'>
-        <Card>Here is info</Card>
+        <div className='column column--one'>
+          <Card>Here is info</Card>
+          <Card>Here is info</Card>
+          <Card>Here is info</Card>
+          <Card>Here is info</Card>
+        </div>
           <div className='logo'>Designer Professionals</div>
           <nav className='navigation'>
             <ul className='navigation__list'>

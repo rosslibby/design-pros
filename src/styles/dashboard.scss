@@ -3,10 +3,12 @@ $gray: #101823;
 
 @import url('https://fonts.googleapis.com/css?family=Gudea:400,700');
 @import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+@import 'grid';
 @import 'card';
 
 body {
   background-color: #f6fafb;
+  font-family: 'Gudea', sans-serif;
 }
 
 .header {
@@ -14,7 +16,6 @@ body {
   background-color: $white;
   border-bottom: 1px solid rgba(120,130,140,.13);
   display: flex;
-  font-family: 'Gudea', sans-serif;
   position: fixed;
   top: 0;
   left: 0;
